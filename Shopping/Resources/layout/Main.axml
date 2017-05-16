@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.macjiji.marcus.shoppinglistjava.MainActivity">
+
+    <!-- Bouton de mise à jour de la liste des items via le serveur -->
+    <Button
+        android:id="@+id/maj_produit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Mettre à jour les produits"
+        android:textAllCaps="false" />
+
+    <!-- Bouton de création d'une nouvelle liste de shopping -->
+    <Button
+        android:id="@+id/creer_liste"
+        android:layout_below="@id/maj_produit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Créer une Liste"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/shopping_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Mes listes de shopping"
+        android:gravity="center"
+        android:layout_below="@id/creer_liste"
+        android:textStyle="bold"/>
+
+    <!-- Liste de toutes les liste de shopping -->
+    <ListView
+        android:id="@+id/list_shopping"
+        android:layout_below="@id/shopping_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,353 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shopping List CSharp</name>
+    </assembly>
+    <members>
+        <member name="M:Shopping_List_CSharp.AjouterItemListe.OnCreate(Android.OS.Bundle)">
+            <summary>
+                Méthode onCreate
+            </summary>
+            <param name="savedInstanceState"></param>
+        </member>
+        <member name="M:Shopping_List_CSharp.AjouterItemListe.InitialiseBaseDeDonnees">
+            <summary>
+                Méthode d'initialisation de la base de données
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.AjouterItemListe.InitialiseListArticles">
+            <summary>
+                Méthode d'initialisation de la liste extensible
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.AjouterItemListe.PrepareListDatas">
+            <summary>
+                Méthode permettant de préparer les données présentes dans la liste de courses
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.ApercuListe.OnCreate(Android.OS.Bundle)">
+            <summary>
+                Méthode onCreate
+            </summary>
+            <param name="savedInstanceState"></param>
+        </member>
+        <member name="M:Shopping_List_CSharp.ApercuListe.InitialiseBaseDeDonnees">
+            <summary>
+                Méthode d'initialisation de la base de données
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.ApercuListe.InitialiseExpandableListView">
+            <summary>
+                Méthode d'initialisation de la liste extensible
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.ApercuListe.InitialiseButton">
+            <summary>
+                Méthode d'initialisation du bouton d'ajout d'un item à une liste de courses
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.ApercuListe.PrepareListDatas">
+            <summary>
+                Méthode permettant de préparer les données présentes dans la liste de courses
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.CreerListe.OnCreate(Android.OS.Bundle)">
+            <summary>
+                Méthode onCreate
+            </summary>
+            <param name="savedInstanceState"></param>
+        </member>
+        <member name="M:Shopping_List_CSharp.CreerListe.initialiseBaseDeDonnees">
+            <summary>
+                Méthode d'initialisation de la base de données.
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.CreerListe.initialiseTextViews">
+            <summary>
+                Méthode d'initialise des vues textes
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.CreerListe.initialiseSeekBar">
+            <summary>
+                Méthode d'initialisation des barres de progression
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.CreerListe.initialiseEditText">
+            <summary>
+                Méthode d'initialisation des champs d'édition
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.CreerListe.initialiseButtons">
+            <summary>
+                Méthode d'initialisation des boutons
+            </summary>
+        </member>
+        <member name="F:Shopping_List_CSharp.Database.sqldb">
+            <summary>
+            Liste des attributs
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.#ctor">
+            <summary>
+            Constructeur par défaut
+            </summary>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database bdd = new Database(); 
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.#ctor(System.String)">
+            <summary>
+            Constructeur prenant en paramètre le nom de la base de données
+            </summary>
+            <param name="sqldb_name">Le nom de la base de données sur laquelle effectuer les opération</param>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database bdd = new Database("Shopping")
+                </code>
+            </example>
+        </member>
+        <member name="P:Shopping_List_CSharp.Database.DatabaseAvailable">
+            <summary>
+            Getter et Setter du booléen sqldb_available
+            </summary>
+            <example>
+                Méthode de mise en oeuvre pour le Getter :
+                <code>
+                    boolean isDatabaseAvailable = Database.DatabaseAvailable
+                </code>
+                Méthode de mise en oeuvre pour le Setter :
+                <code>
+                    Database.DatabaseAvailable = true;
+                </code>
+            </example>
+        </member>
+        <member name="P:Shopping_List_CSharp.Database.Message">
+            <summary>
+                Getter et Setter pour le message
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.CreateDatabase(System.String)">
+            <summary>
+                Méthode de création de la base de données. Cette méthode est mise en privée car elle n'est utilisée que par le constructeur Database(string dbname)
+            </summary>
+            <param name="sqldb_name">Le nom de la base de données à créer</param>
+            <see cref="M:Shopping_List_CSharp.Database.#ctor(System.String)"/>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.AddCategory(Shopping_List_CSharp.Category)">
+            <summary>
+                Méthode permettant d'ajouter une catégorie à la base de données
+            </summary>
+            <param name="category">La catégorie à ajouter</param>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database bdd = new Database("Shopping");
+                    bdd.AddCategory(new Category(0, "Fruits", "Fruits"));
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.AddItem(Shopping_List_CSharp.Item)">
+            <summary>
+                Méthode permettant d'ajouter un item à la base de données
+            </summary>
+            <param name="item">L'item à ajouter</param>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database bdd = new Database("Shopping");
+                    bdd.AddItem(new Item(0, 1, "Banane", "Banana"));
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.AddShoppingList(Shopping_List_CSharp.ShoppingList)">
+            <summary>
+                Méthode permettant d'ajouter une liste de courses à la base de données
+            </summary>
+            <param name="shoppingList">La liste de courses</param>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database bdd = new Database("Shopping");
+                    bdd.AddShoppingList(new ShoppingList("Test Liste, 255, 255, 255));
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.AddShoppingListItem(Shopping_List_CSharp.ShoppingListItem)">
+            <summary>
+                Méthode permettant d'ajouter un item à une liste de courses au sein de la base de données
+            </summary>
+            <param name="shoppingListItem">L'item de liste de courses</param>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database bdd = new Database("Shopping");
+                    bdd.AddShoppingListItem((new ShoppingListItem(0, 1, 1));
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.GetAllShoppingLists">
+            <summary>
+                Méthode permettant de récupérer toutes les listes de courses présentes en base de données.
+            </summary>
+            <returns>Les listes de courses si elles existent, null sinon</returns>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.GetAllShoppinLists();
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.GetAllCategories">
+            <summary>
+                Méthode permettant de récupérer toutes les catégories présentes en base de données.
+            </summary>
+            <returns>La liste de catégories si elles existent, null sinon</returns>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.GetAllCAtegories();
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.GetAllItems">
+            <summary>
+                Méthode permettant de récupérer tous les items présents en base de données.
+            </summary>
+            <returns>La liste d'items si ils existent, null sinon</returns>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.GetAllItems();
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.GetAllShoppingListItemsWithId(System.Int32)">
+            <summary>
+                Méthode permettant de récupérer tous les items d'une liste de courses présents en base de données.
+            </summary>
+            <returns>La liste d'items d'une liste de courses si ils existent, null sinon</returns>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.GetAllShoppingListItemsWithId(1);
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.GetPersonnalItemsFromShoppingList(System.Int32,System.Int32)">
+            <summary>
+                Méthode permettant de récupérer tous le nom des items d'une liste de courses présents en base de données.
+            </summary>
+            <returns>La liste des noms d'items d'une liste de courses si ils existent, null sinon</returns>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.GetPersonnalItemsFromShoppingList(1, 3);
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.GetCategoryNameWithId(System.Int32)">
+            <summary>
+                Méthode permettant de récupérer le nom d'une catégorie présente en base de données.
+            </summary>
+            <returns>Le nom de la catégorie, null sinon</returns>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.GetCategoryNameWithId(5);
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.GetItemNameWithId(System.Int32)">
+            <summary>
+                Méthode permettant de récupérer le nom d'un item présent en base de données.
+            </summary>
+            <returns>Le nom de l'item, null sinon</returns>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.GetItemNameWithId(5);
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.DeleteCategoryWithId(System.Int32)">
+            <summary>
+                Méthode permettant de supprimer une catégorie présente en base de données.
+            </summary>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.DeleteCategoryWithId(1);
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.DeleteItemWithId(System.Int32)">
+            <summary>
+                Méthode permettant de supprimer un item présent en base de données.
+            </summary>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.DeleteItemWithId(10);
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.DeleteShoppingListWithId(System.Int32)">
+            <summary>
+                Méthode permettant de supprimer une liste de courses et tous ces items rattachés.
+            </summary>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.DeleteShoppingListWithId(1);
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.Database.DeleteItemIntoShoppingList(System.Int32,System.Int32)">
+            <summary>
+                Méthode permettant de supprimer un item rattaché à une liste de courses.
+            </summary>
+            <example>
+                Méthode de mise en oeuvre :
+                <code>
+                    Database baseDeDonnees = new Database("Shopping");
+                    baseDeDonnees.DeleteItemIntoShoppingList(1, 10);
+                </code>
+            </example>
+        </member>
+        <member name="M:Shopping_List_CSharp.MainActivity.OnCreate(Android.OS.Bundle)">
+            <summary>
+                Méthode onCreate
+            </summary>
+            <param name="bundle"></param>
+        </member>
+        <member name="M:Shopping_List_CSharp.MainActivity.initialiseBaseDeDonnees">
+            <summary>
+                Méthode d'initialisation de la base de données
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.MainActivity.initialiseBoutons">
+            <summary>
+                Méthode d'initialisation des boutons
+            </summary>
+        </member>
+        <member name="M:Shopping_List_CSharp.MainActivity.initialiseListView">
+            <summary>
+                Méthode d'initialisation des listes de courses
+            </summary>
+        </member>
+    </members>
+</doc>
