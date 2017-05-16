@@ -1,9 +1,16 @@
+
+<img src="/images/bshopc.png"/>
+
+
 # Shopping List C#
 
 Créer votre application Shopping List avec C# et Visual Studio. L'application permet :
-    -> De créer des listes de courses;
-    -> De récupérer des données issues d'un serveur à partir de la librairie OkHttp;
-    -> D'ajouter et supprimer des items à une liste de courses.
+* De créer des listes de courses;
+* De récupérer des données issues d'un serveur à partir de la librairie OkHttp;
+* D'ajouter et supprimer des items à une liste de courses.
+
+<img src="/images/apshopj.png"/>
+
 
 ## Pour commencer
 
