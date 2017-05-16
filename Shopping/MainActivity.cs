@@ -1,4 +1,4 @@
-﻿using Android.App;
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Util;
@@ -15,8 +15,8 @@ namespace Shopping_List_CSharp
     public class MainActivity : Activity
     {
         // URL faisant le lien entre l'application et le serveur à partir des scripts PHP
-        private readonly string urlCategories = "http://192.168.1.63/shopping/getCategoriesFromDB.php";
-        private readonly string urlItems = "http://192.168.1.63/shopping/getItemsFromDB.php";
+        private readonly string urlCategories = "http://" + PUT_YOUR_IP_ADRESS_HERE + "/shopping/getCategoriesFromDB.php";
+        private readonly string urlItems = "http://" + PUT_YOUR_IP_ADRESS_HERE + "/shopping/getItemsFromDB.php";
 
         // Composants graphiques
         protected ListView listesCourses;
